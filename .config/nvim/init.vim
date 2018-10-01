@@ -9,6 +9,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
+" Utils
+Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/emmet-vim'
+
 " Colorscheme
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
@@ -23,7 +27,7 @@ colorscheme palenight
 set laststatus=2
 let g:lightline = { 'colorscheme': 'palenight' }
 
-" Indent configuration
+" Default indent configs
 set tabstop=2
 set shiftwidth=2
 set expandtab

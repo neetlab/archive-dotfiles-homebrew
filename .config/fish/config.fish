@@ -19,3 +19,6 @@ set -x fish_color_redirection    blue
 
 # Setting default editor
 set -x EDITOR nvim
+
+# Command aliases
+alias vim "nvim"
