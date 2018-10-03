@@ -22,3 +22,4 @@ set -x EDITOR nvim
 
 # Command aliases
 alias vim "nvim"
+alias ghci "stack ghci"
