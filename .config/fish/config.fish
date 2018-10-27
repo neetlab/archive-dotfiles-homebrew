@@ -20,6 +20,9 @@ set -x fish_color_redirection    blue
 # Setting default editor
 set -x EDITOR nvim
 
+# Completion Setting for Kitty shell
+kitty + complete setup fish | source
+
 # Command aliases
 alias vim "nvim"
 alias ghci "stack ghci"
