@@ -1,3 +1,4 @@
+
 /*----------------------------
   UI Colors
 ----------------------------*/
@@ -42,6 +43,7 @@ module.exports = {
     'hyperterm-paste',
     'hyper-tabs-enhanced',
     'hyper-statusline',
+    // 'hyper-font-ligatures',
   ],
 
   config: {
@@ -55,8 +57,7 @@ module.exports = {
     cursorShape:     'BLOCK',
 
     fontFamily: [
-      'Fira Code',
-      'Hack Nerd Font',
+      'FuraCode Nerd Font',
       '游ゴシック体',
     ].join(', '),
 
