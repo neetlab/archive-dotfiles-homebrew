@@ -21,7 +21,7 @@ set -x fish_color_quote          green
 set -x fish_color_redirection    blue
 
 # Completion Setting for Kitty shell
-if command -s kitty
+if command -s kitty > /dev/null
   kitty + complete setup fish | source
 end
 
