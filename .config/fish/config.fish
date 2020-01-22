@@ -1,14 +1,16 @@
-# Loading environment variable
-source ~/.profile
+# Env
+bass source ~/.profile
 
-# Setting language
-set -x LC_ALL ja_JP.UTF-8
+# Prompt
+starship init fish | source
 
-# Appending PATH
-set -x PATH ~/.local/bin $PATH
+# Hide welcome message
+set fish_greeting
 
-# Setting default editor
-set -x EDITOR nvim
+# Alias
+alias vim "nvim"
+alias ghci "stack ghci"
+alias project "ghq list | peco; cd $1"
 
 # Setting ANSI colors to fishshell force
 set -x fish_color_autosuggestion lightBlack
@@ -19,12 +21,3 @@ set -x fish_color_error          red
 set -x fish_color_param          cyan
 set -x fish_color_quote          green
 set -x fish_color_redirection    blue
-
-# Completion Setting for Kitty shell
-if command -s kitty > /dev/null
-  kitty + complete setup fish | source
-end
-
-# Command aliases
-alias vim "nvim"
-alias ghci "stack ghci"
