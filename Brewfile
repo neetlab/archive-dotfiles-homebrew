@@ -6,6 +6,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 brew "bat"
 brew "fish"
+brew "fzf"
 brew "ghq"
 brew "git"
 brew "mas"
@@ -28,6 +29,7 @@ cask "mattermost"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"
+cask "zoomus"
 mas "1Password 7", id: 1333542190
 mas "Dato", id: 1470584107
 mas "GarageBand", id: 682658836
