@@ -1,6 +1,9 @@
+tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
+brew "bat"
 brew "fish"
 brew "ghq"
 brew "git"
@@ -8,15 +11,20 @@ brew "mas"
 brew "nodenv"
 brew "starship"
 brew "yarn"
+brew "github/gh/gh"
+cask "cmd-eikana"
 cask "discord"
+cask "font-jetbrains-mono"
 cask "gitkraken"
 cask "google-chrome"
+cask "hiddenbar"
 cask "iterm2"
 cask "mattermost"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"
 mas "1Password 7", id: 1333542190
+mas "Dato", id: 1470584107
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
