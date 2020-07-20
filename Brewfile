@@ -1,3 +1,4 @@
+tap "devhubapp/devhub"
 tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -17,9 +18,12 @@ brew "starship"
 brew "yarn"
 brew "github/gh/gh"
 cask "adobe-creative-cloud"
+cask "anki"
 cask "cmd-eikana"
+cask "devhub"
 cask "discord"
 cask "font-jetbrains-mono"
+cask "forklift"
 cask "gitkraken"
 cask "google-chrome"
 cask "google-japanese-ime"
@@ -29,13 +33,17 @@ cask "logitech-options"
 cask "mattermost"
 cask "slack"
 cask "spotify"
+cask "tableplus"
 cask "visual-studio-code"
 cask "zoomus"
 mas "1Password 7", id: 1333542190
+mas "Affinity Designer", id: 824171161
+mas "Affinity Photo", id: 824183456
 mas "Dato", id: 1470584107
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Spark", id: 1176895641
