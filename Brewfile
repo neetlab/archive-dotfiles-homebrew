@@ -15,11 +15,13 @@ brew "fish"
 brew "fzf"
 brew "ghq"
 brew "git"
+brew "go"
 brew "mas"
 brew "n"
 brew "neovim"
 brew "postgresql", restart_service: true
 brew "redis", restart_service: true
+brew "rustup-init"
 brew "sl"
 brew "starship"
 brew "yarn"
