@@ -66,7 +66,6 @@ cask "tower"
 cask "visual-studio-code"
 cask "visual-studio-code-insiders"
 cask "zoomus"
-mas "1Password 7", id: 1333542190
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "GarageBand", id: 682658836
