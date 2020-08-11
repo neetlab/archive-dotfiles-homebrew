@@ -1,4 +1,5 @@
 tap "devhubapp/devhub"
+tap "domt4/autoupdate"
 tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
