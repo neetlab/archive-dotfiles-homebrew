@@ -10,7 +10,7 @@ set fish_greeting
 # Alias
 alias vim "nvim"
 alias ghci "stack ghci"
-alias project "ghq list | peco; cd $1"
+alias project "cd (ghq root)/(ghq list | fzf)"
 
 # Setting ANSI colors to fishshell force
 set -x fish_color_autosuggestion lightBlack
