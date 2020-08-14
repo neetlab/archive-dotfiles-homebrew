@@ -15,3 +15,6 @@ export PATH="$HOME/go/bin:$PATH"
 
 # GCP Credential
 export GOOGLE_APPLICATION_CREDENTIALS='/Users/nucx/Documents/My First Project-b3e7dd2c5901.json'
+
+# Misc
+export BSIR_DIR='/Users/nucx/ghq/github.com/elrumo/macOS_Big_Sur_icons_replacements/icons'
