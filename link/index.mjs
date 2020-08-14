@@ -22,10 +22,12 @@ const readdirRecursiveAbs = async (dir) => {
   return [...files, ...nestedFiles].flat();
 };
 
-const symbolicRSync = async (source, target) => {
-  const entries = await readdirRecursiveAbs(source);
-  const singleBar = new cliProgress.SingleBar();
+const symbolicRSync = async (source, target, ignorePatterns = []) => {
+  const entries = await readdirRecursiveAbs(source).filter((entry) => {
+    return ignorePatterns.every((pattern) => !pattern.test(entry));
+  });
 
+  const singleBar = new cliProgress.SingleBar();
   singleBar.start(entries.length, 0);
   let i = 0;
 
@@ -45,6 +47,15 @@ const symbolicRSync = async (source, target) => {
   return { count: entries.length };
 };
 
+const IGNORE_PATTERNS = [
+  /LICENSE/,
+  /README\.md/,
+  /setup\.sh/,
+  /\.gitconfig/,
+  /\.gitignore/,
+  /link/,
+];
+
 (async () => {
   if (process.env.USER === "root") {
     console.error(
@@ -57,7 +68,7 @@ const symbolicRSync = async (source, target) => {
   const USER_DIR = process.argv[3] || process.env.USER_DIR;
 
   try {
-    const stat = await symbolicRSync(SOURCE_DIR, USER_DIR);
+    const stat = await symbolicRSync(SOURCE_DIR, USER_DIR, IGNORE_PATTERNS);
     console.info(
       chalk.green(
         `SUCCESS: Successfully symlinked ${stat.count} files to ${USER_DIR}`
