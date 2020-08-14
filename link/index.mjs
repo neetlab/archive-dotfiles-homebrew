@@ -5,63 +5,44 @@ import chalk from "chalk";
 import mkdirp from "mkdirp";
 import cliProgress from "cli-progress";
 
-/**
- * RSync of UNIX but symbolic link
- * @param sourceDir Source directory to link
- * @param baseDir Base directory. Used for
- * @param recursive Whether process recursively
- * @returns ⊥
- */
-const symbolicRSync = async (
-  sourceDir,
-  sourceBaseDir,
-  targetBaseDir,
-  recursive = true
-) => {
-  const singleBar = new cliProgress.SingleBar(),
-    relativeSourceDir = path.relative(sourceBaseDir, sourceDir),
-    targetDir = path.join(targetBaseDir, relativeSourceDir);
+const readdirRecursiveAbs = async (dir) => {
+  const dirents = await fs.readdir(dir, { withFileTypes: true });
 
-  // Create corresponding dir in target
-  await mkdirp(targetDir);
-
-  const dirents = await fs.readdir(sourceDir, { withFileTypes: true });
-
-  // Files
-  const fileNames = dirents
+  const files = dirents
     .filter((dirent) => dirent.isFile())
-    .map((dirent) => dirent.name);
+    .map((dirent) => path.join(dir, dirent.name));
 
-  // Directories
-  const dirNames = dirents
-    .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name);
+  const nestedFiles = await Promise.all(
+    dirents
+      .filter((dirent) => dirent.isDirectory())
+      .map((dirent) => path.join(dir, dirent.name))
+      .map((dir) => readdirRecursiveAbs(dir))
+  );
 
-  // Create symlinks
-  singleBar.setTotal(fileNames.length, 0);
-  singleBar.start();
+  return [...files, ...nestedFiles].flat();
+};
 
+const symbolicRSync = async (source, target) => {
+  const entries = await readdirRecursiveAbs(source);
+  const singleBar = new cliProgress.SingleBar();
+
+  singleBar.start(entries.length, 0);
   let i = 0;
-  for (const fileName of fileNames) {
-    await fs.symlink(
-      path.join(sourceDir, fileName),
-      path.join(targetDir, fileName)
-    );
-    singleBar.update(i++);
+
+  for (const entry of entries) {
+    const basename = path.basename(entry);
+    const dirname = path.dirname(entry);
+    const relativeDirname = path.relative(source, dirname);
+    const targetDirname = path.join(target, relativeDirname);
+    await mkdirp(targetDirname);
+    const targetEntry = path.join(targetDirname, basename);
+    await fs.symlink(entry, targetEntry);
+    i++;
+    singleBar.update(i);
   }
 
   singleBar.stop();
-  if (!recursive) return;
-
-  // continue...
-  for (const dirName of dirNames) {
-    await symbolicRSync(
-      path.join(sourceDir, dirName),
-      sourceBaseDir,
-      targetDir,
-      true
-    );
-  }
+  return { count: entries.length };
 };
 
 (async () => {
@@ -72,15 +53,17 @@ const symbolicRSync = async (
     process.exit(1);
   }
 
-  const SOURCE_DIR = process.argv[2] || process.cwd(),
-    USER_DIR = process.argv[3] || process.env.USER_DIR;
+  const SOURCE_DIR = process.argv[2] || process.cwd();
+  const USER_DIR = process.argv[3] || process.env.USER_DIR;
 
   try {
-    await symbolicRSync(SOURCE_DIR, SOURCE_DIR, USER_DIR, true);
+    const stat = await symbolicRSync(SOURCE_DIR, USER_DIR);
+    console.info(
+      chalk.green(
+        `SUCCESS: Successfully symlinked ${stat.count} files to ${USER_DIR}`
+      )
+    );
   } catch (error) {
-    console.error(chalk.red(error));
-    process.exit(1);
+    throw error;
   }
-
-  console.info(chalk.green(`SUCCESS: Successfully symlinked to ${USER_DIR}`));
 })();
