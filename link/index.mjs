@@ -65,7 +65,7 @@ const IGNORE_PATTERNS = [
   }
 
   const SOURCE_DIR = process.argv[2] || process.cwd();
-  const USER_DIR = process.argv[3] || process.env.USER_DIR;
+  const USER_DIR = process.argv[3] || process.env.HOME;
 
   try {
     const stat = await symbolicRSync(SOURCE_DIR, USER_DIR, IGNORE_PATTERNS);

@@ -1,0 +1,23 @@
+com.google.Chrome              http
+com.readdle.smartemail-Mac     mailto
+com.binarynights.ForkLift-3    ftp
+
+com.google.Chrome             public.url             all
+com.googlecode.iterm2         public.shell-script    all
+com.readdle.smartemail-Mac    public.message         all
+
+com.microsoft.VSCode    public.source-code     all
+com.microsoft.VSCode    public.json            all
+com.microsoft.VSCode    public.yaml            all
+
+com.microsoft.VSCode    js         all
+com.microsoft.VSCode    jsx        all
+com.microsoft.VSCode    ts         all
+com.microsoft.VSCode    tsx        all
+com.microsoft.VSCode    graphql    all
+
+com.microsoft.VSCode    py     all
+com.microsoft.VSCode    rb     all
+com.microsoft.VSCode    pl     all
+com.microsoft.VSCode    php    all
+

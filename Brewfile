@@ -11,6 +11,7 @@ tap "homebrew/services"
 brew "bat"
 brew "cmatrix"
 brew "cowsay"
+brew "duti"
 brew "editorconfig"
 brew "fish"
 brew "fzf"
@@ -73,6 +74,7 @@ cask "visual-studio-code-insiders"
 cask "zoomus"
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
+mas "Deliveries", id: 924726344
 mas "GarageBand", id: 682658836
 mas "Gifski", id: 1351639930
 mas "GoodNotes", id: 1444383602
