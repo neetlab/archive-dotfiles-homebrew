@@ -15,6 +15,7 @@ com.microsoft.VSCode    jsx        all
 com.microsoft.VSCode    ts         all
 com.microsoft.VSCode    tsx        all
 com.microsoft.VSCode    graphql    all
+pro.writer.mac          md         all
 
 com.microsoft.VSCode    py     all
 com.microsoft.VSCode    rb     all
