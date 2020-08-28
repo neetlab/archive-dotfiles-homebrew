@@ -23,6 +23,8 @@ duti ~/.duti
 ln -s ~/.iterm2/Profiles.json ~/Library/Application\ Support/iTerm2/DynamicProfiles
 
 # Use Fish as the default shell
-sudo sh -c "echo $(which fish) > /etc/shells"
-chsh -s $(which fish)
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+if [[ $SHELL != *"fish"* ]]; then
+  sudo sh -c "echo $(which fish) > /etc/shells"
+  chsh -s $(which fish)
+  curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+fi
