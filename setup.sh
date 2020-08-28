@@ -1,6 +1,5 @@
-# Run linker
-# TODO: Use binary
-cd ./link && yarn && cd .. && ./link/index.mjs $PWD $HOME
+# Link
+ln -sf ~/dotfiles/* ~/
 
 # Back to home
 cd $HOME
@@ -19,6 +18,9 @@ source ~/.macos
 
 # Set default apps
 duti ~/.duti
+
+# iTerm2 DynamicProfile
+ln -s ~/.iterm2/Profiles.json ~/Library/Application\ Support/iTerm2/DynamicProfiles
 
 # Use Fish as the default shell
 sudo sh -c "echo $(which fish) > /etc/shells"
