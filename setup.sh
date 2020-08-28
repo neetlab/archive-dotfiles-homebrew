@@ -20,7 +20,8 @@ source ~/.macos
 duti ~/.duti
 
 # iTerm2 DynamicProfile
-ln -s ~/.iterm2/Profiles.json ~/Library/Application\ Support/iTerm2/DynamicProfiles
+# https://gitlab.com/gnachman/iterm2/-/issues/9107
+cp ~/.iterm2/Profiles.json ~/Library/Application\ Support/iTerm2/DynamicProfiles
 
 # Use Fish as the default shell
 if [[ $SHELL != *"fish"* ]]; then
