@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "create-react-app": "^3.4.1",
     "majestic": "^1.7.0",
     "typescript": "^3.9.7",
     "vsce": "^1.77.0"
