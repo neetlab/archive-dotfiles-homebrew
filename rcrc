@@ -1,0 +1,2 @@
+EXCLUDES="README.md LICENSE"
+UNDOTTED="Brewfile Brewfile.lock.json"

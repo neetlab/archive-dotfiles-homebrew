@@ -1,0 +1,2 @@
+# Env
+bass source ~/.profile
