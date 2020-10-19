@@ -21,3 +21,9 @@ set -x fish_color_error          red
 set -x fish_color_param          cyan
 set -x fish_color_quote          green
 set -x fish_color_redirection    blue
+
+# Load ASDF
+source /usr/local/opt/asdf/asdf.fish
+
+# Load direnv
+eval (direnv hook fish)
