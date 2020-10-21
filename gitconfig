@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
 	name = Ryo Igarashi
 	email = n33t5hin@gmail.com
+[push]
+	default = current
