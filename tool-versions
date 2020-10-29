@@ -2,3 +2,4 @@ nodejs 12.19.0
 rust 1.47.0
 haskell 8.10.2
 php 7.4.12RC1
+golang 1.15.3

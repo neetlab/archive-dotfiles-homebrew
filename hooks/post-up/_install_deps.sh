@@ -11,6 +11,8 @@ yarn
 asdf plugin add nodejs
 asdf plugin add haskell
 asdf plugin add rust
+asdf plugin add golang
+asdf plugin add php
 
 # Node.js setup
 # https://github.com/asdf-vm/asdf-nodejs#install
