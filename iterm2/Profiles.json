@@ -30,7 +30,7 @@
         "Red Component": "0.3058824"
       },
       "Right Option Key Sends": 0,
-      "Rows": 25,
+      "Rows": 50,
       "Default Bookmark": "No",
       "Cursor Guide Color": {
         "Red Component": 0.70213186740875244,
@@ -388,7 +388,7 @@
         "Blue Component": "1",
         "Red Component": "1"
       },
-      "Transparency": 0.63631282066231343,
+      "Transparency": 0,
       "Guid": "54A25471-98B0-4EA1-89B4-BB58582A63E3",
       "Custom Directory": "No",
       "Ansi 1 Color": {
