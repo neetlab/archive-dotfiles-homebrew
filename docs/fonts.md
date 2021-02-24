@@ -9,3 +9,6 @@
 | ざっくりゴシック | https://nippori30.com/ |
 | しろくまフォント | https://www.lazypolarbear.com/entry/font-shirokuma |
 | マカポップ | https://pm85122.onamae.jp/851mkpop.html |
+| Noto Sans JP | https://fonts.google.com/specimen/Noto+Sans+JP?subset=japanese |
+| Noto Serif JP | https://fonts.google.com/specimen/Noto+Serif+JP?subset=japanese |
+| Roboto | https://fonts.google.com/specimen/Roboto |

@@ -18,6 +18,7 @@ com.microsoft.VSCode    graphql    all
 pro.writer.mac          md         all
 
 com.microsoft.VSCode    py     all
+com.microsoft.VSCode    rs     all
 com.microsoft.VSCode    rb     all
 com.microsoft.VSCode    pl     all
 com.microsoft.VSCode    php    all

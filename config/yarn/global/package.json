@@ -4,6 +4,7 @@
     "create-next-app": "^10.0.4",
     "create-react-app": "^3.4.1",
     "majestic": "^1.7.0",
+    "ts-node": "^9.1.1",
     "typescript": "^3.9.7",
     "vsce": "^1.77.0"
   }
