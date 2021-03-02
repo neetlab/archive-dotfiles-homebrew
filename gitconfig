@@ -4,5 +4,6 @@
 	name = Ryo Igarashi
 	email = n33t5hin@gmail.com
 	signingkey = F0D22B175F898D464998856F5C2D6ECF9237F65F
+
 [push]
-	default = current
+  default = current
