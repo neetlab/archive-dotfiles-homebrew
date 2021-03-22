@@ -1,9 +1,12 @@
 {
   "dependencies": {
+    "@vitejs/create-app": "^2.0.2",
+    "bs-platform": "^9.0.2",
     "bull-repl": "^0.26.2",
     "create-next-app": "^10.0.4",
     "create-react-app": "^3.4.1",
     "majestic": "^1.7.0",
+    "spago": "^0.19.1",
     "ts-node": "^9.1.1",
     "typescript": "^3.9.7",
     "vsce": "^1.77.0"
