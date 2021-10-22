@@ -4,7 +4,7 @@ function git_checkout_fzf
     exit 1
   end
 
-  set -l preview "echo {} | xargs git --no-pager log --oneline --color=always --graph"
+  set -l preview "echo {} | xargs git log --oneline --color=always"
   set -l active_branch (git branch -a | fzf --preview=$preview | xargs)
 
   if [ $active_branch ]
@@ -14,4 +14,4 @@ function git_checkout_fzf
   commandline -f repaint
 end
 
-bind \cc git_checkout_fzf
+bind \cs git_checkout_fzf
