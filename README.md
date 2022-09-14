@@ -4,7 +4,8 @@
 cd $HOME
 git clone https://github.com/neet/.dotfiles.git
 cd .dotfiles
-rcup rcrc & rcup
+rcup rcrc
+sudo rcup
 ```
 
 ## License
