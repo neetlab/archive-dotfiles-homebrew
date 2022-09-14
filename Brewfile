@@ -1,4 +1,3 @@
-tap "devhubapp/devhub"
 tap "domt4/autoupdate"
 tap "eddieantonio/eddieantonio"
 tap "github/gh"
@@ -9,7 +8,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "wantedly/tools", "git@github.com:wantedly/homebrew-tools"
 brew "ack"
 brew "act"
 brew "libpng"
@@ -105,19 +103,13 @@ brew "yarn"
 brew "youtube-dl"
 brew "zlib"
 brew "eddieantonio/eddieantonio/imgcat"
-brew "wantedly/tools/valec"
-brew "wantedly/tools/valecjr"
 cask "1password"
 cask "1password-cli"
 cask "adobe-creative-cloud"
 cask "alacritty"
 cask "anki"
-cask "bloomrpc"
 cask "cmd-eikana"
-cask "devhub"
 cask "discord"
-cask "discord-canary"
-cask "discord-ptb"
 cask "displaperture"
 cask "docker"
 cask "dozer"
@@ -174,22 +166,24 @@ cask "zeplin"
 cask "zoom"
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
+mas "Bear", id: 1091189122
+mas "Craft", id: 1487937127
 mas "Deliveries", id: 924726344
-mas "GarageBand", id: 682658836
+mas "egword Universal 2", id: 1272842196
 mas "Gifski", id: 1351639930
 mas "GoodNotes", id: 1444383602
-mas "iA Writer", id: 775737590
+mas "Hotspot Shield", id: 771076721
 mas "iMage Tools", id: 493949693
 mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
+mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
-mas "LookUp", id: 1476163639
+mas "LookUp", id: 872564448
 mas "Magnet", id: 441258766
+mas "MeetingBar", id: 1532419400
 mas "MindNode", id: 1289197285
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Pixelmator Pro", id: 1289583905
 mas "Spark", id: 1176895641
 mas "Things", id: 904280696
+mas "Toggl Track", id: 957734279
 mas "Unsplash Wallpapers", id: 1284863847
 mas "Xcode", id: 497799835
