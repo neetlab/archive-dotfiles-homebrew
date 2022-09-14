@@ -10,7 +10,6 @@ yarn
 # ASDF plugins
 asdf plugin add nodejs
 asdf plugin add haskell
-asdf plugin add rust
 asdf plugin add golang
 asdf plugin add php
 
