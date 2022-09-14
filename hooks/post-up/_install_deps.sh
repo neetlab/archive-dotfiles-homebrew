@@ -2,7 +2,7 @@
 cd $HOME
 
 # Install all dependencies from Brewfile
-brew bundle insatll
+brew bundle install 
 
 # Install global Node.js packages
 yarn
