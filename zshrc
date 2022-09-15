@@ -27,3 +27,19 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
+
+function ghq_search_fzf() {
+  local ghq_root=$(ghq root)
+  local glow_opts="$ghq_root/{}/README.md"
+  local active_project=$(ghq list | fzf --ansi --preview "glow -p -s dark $glow_opts")
+
+  if [ -n "$active_project" ]; then
+    cd ${target_dir}
+    zle accept-line
+  fi
+
+  zle reset-prompt
+}
+
+zle -N ghq_search_fzf
+bindkey "^g" ghq_search_fzf
