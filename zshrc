@@ -1,13 +1,29 @@
-# Env
-source ~/.profile
+export ZSH="$HOME/.oh-my-zsh"
 
-# Load direnv
-eval "$(direnv hook zsh)"
+plugins=(
+  1password
+  asdf
+  brew
+  direnv
+  docker
+  docker-compose
+  docker-machine
+  fzf
+  gcloud
+  git
+  macos
+  npm
+  pip
+  poetry
+  pyenv
+  pylint
+  python
+  rust
+  vscode
+  yarn
+  zsh-autosuggestions
+)
 
-# prompt
+source $ZSH/oh-my-zsh.sh
+
 eval "$(starship init zsh)"
-
-## Borrwoed from https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
-## Migrate to oh-my-zsh in the future
-# Load ASDF
-. /usr/local/opt/asdf/libexec/asdf.sh
