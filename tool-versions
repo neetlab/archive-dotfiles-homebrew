@@ -1,6 +1,6 @@
 nodejs 18.8.0
 haskell 8.10.2
-golang 1.15.3
+golang 1.18.6
 deno 1.8.1
 purescript 0.14.0
 python 3.8.9

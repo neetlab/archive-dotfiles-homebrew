@@ -7,6 +7,9 @@ brew bundle install
 # Install global Node.js packages
 yarn
 
+# Install asdf via Git
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+
 # ASDF plugins
 asdf plugin add nodejs
 asdf plugin add haskell
