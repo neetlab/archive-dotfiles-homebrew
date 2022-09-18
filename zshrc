@@ -35,7 +35,7 @@ function ghq_search_fzf() {
   local active_project=$(ghq list | fzf --ansi --preview "glow -p -s dark $glow_opts")
 
   if [ -n "$active_project" ]; then
-    cd ${target_dir}
+    cd "${ghq_root}/${active_project}"
     zle accept-line
   fi
 
