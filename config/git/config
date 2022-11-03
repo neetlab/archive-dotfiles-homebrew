@@ -1,0 +1,14 @@
+# https://git-scm.com/docs/git-config#EXAMPLES
+[push]
+  default=current
+
+[pull]
+  rebase=false
+
+[core]
+  repositoryformatversion=0
+  filemode=true
+  bare=false
+  logallrefupdates=true
+  ignorecase=false
+  precomposeunicode=true
