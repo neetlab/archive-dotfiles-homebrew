@@ -1,2 +1,3 @@
 [gcloud]
-disabled = true
+# format = 'on [$symbol$account(@$domain)(\($project\))]($style) '
+format = '[@$project]($style) '
