@@ -9,3 +9,5 @@
   default = current
 [pull]
 	rebase = false
+[core]
+	ignorecase = false
