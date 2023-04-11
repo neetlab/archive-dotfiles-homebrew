@@ -25,6 +25,9 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# History per directory
+setopt no_share_history
+
 source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
