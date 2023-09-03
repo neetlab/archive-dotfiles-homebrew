@@ -12,3 +12,14 @@
   logallrefupdates=true
   ignorecase=false
   precomposeunicode=true
+
+[alias]
+  st = status -s
+  lg = log --oneline
+  cane = commit --amend --no-edit
+  diffns = diff -- . ':(exclude)*.lock'
+  last = log -1 HEAD
+  pushf = push --force-with-lease --force-if-includes
+  pushff = push --force-with-lease --force
+  pushfff = push --force
+  
